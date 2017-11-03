@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ajip</class>
+ <widget class="QMainWindow" name="ajip">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>671</width>
+    <height>514</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Automatic Java Installer Project</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../../../media/bilisim/G|Drive Mobile/logo256.ico</normaloff>../../../../media/bilisim/G|Drive Mobile/logo256.ico</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QTabWidget" name="tbSekmeler">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>671</width>
+      <height>491</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab_3">
+     <attribute name="title">
+      <string>Seç ve Kur</string>
+     </attribute>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>60</y>
+        <width>31</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>v0.2</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnSec">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>50</y>
+        <width>90</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Dosya Seç</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="txtCommandLine">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>80</y>
+        <width>651</width>
+        <height>381</height>
+       </rect>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>0</y>
+        <width>131</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Seçilen Dosya Adı</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>0</y>
+        <width>131</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Seçilen Dosya Yolu</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnEklentiYukle">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>50</y>
+        <width>82</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Eklenti Yükle</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="txtKlasorAdi">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>20</y>
+        <width>101</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>0</y>
+        <width>81</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Java Klasörü</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="txtDosyaYolu">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>20</y>
+        <width>351</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnKur">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>50</y>
+        <width>90</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Kur</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="txtDosyaAdi">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>181</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnKapat">
+      <property name="geometry">
+       <rect>
+        <x>570</x>
+        <y>50</y>
+        <width>90</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Kapat</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_4">
+     <attribute name="title">
+      <string>Hakkında</string>
+     </attribute>
+     <widget class="QTextEdit" name="textEdit">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>160</y>
+        <width>641</width>
+        <height>301</height>
+       </rect>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;GNU KISITLI GENEL KAMU LİSANSI&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Sürüm 3, 29 Haziran 2007&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Copyright © 2007 Özgür Yazılım Vakfı &amp;lt;http://fsf.org/&amp;gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Bu lisans belgesinin tam kopyasının herkes tarafından koplayalanması ve dağıtımı serbest olup, değiştirilmesi yasaktır.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;GNU Kısıtlı Genel Kamu Lisansı’nın işbu sürümü, aşağıdaki listede yer alan ek izinlerle eksiklikleri giderilerek GNU Genel Kamu Lisansı’nın 3′üncü sürümünün hüküm ve koşullarını kapsamaktadır.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;0. Ek Tanımlamalar.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Burada kullanıldığı gibi “işbu lisans”, GNU Kısıtlı Genel Kamu Lisansı’nın 3′üncü sürümünü, “GNU GKL” de GNU Genel Kamu Lisansı’nın 3′üncü sürümünü kasteder.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;“Kütüphane” işbu lisansla kapsama alınmış, aşağıda tanımlandığı gibi bir uygulama veya birleştirilmiş çalışma dışındaki çalışmaları kasteder.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Bir “uygulama” kütüphane tarafından sağlanan arayüzün kullandığı her türlü çalışma olup, kütüphaneye başka türlü dayanmayan çalışmadır. Kütüphane tarafından tanımlanan bir sınıfın altsınıfını tanımlamak, kütüphane tarafından sağlanan bir arayüzü kullanma şekli olarak varsayılır.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;“Birleştirilmiş çalışma”, bir uygulamanın kütüphaneyle birleşmesi ya da bağlanmasıyla ortaya çıkan çalışmadır. Birleştirilmiş çalışmayla yapılan belirli bir kütüphane sürümüne aynı zamanda “bağlanmış sürüm” adı verilir.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Birleştirilmiş çalışma için “En Küçük İlgili Kaynak”, diğer durumlardan ayrı olarak düşünüldüğünde uygulamaya dayalı olmayan ve bağlanmış sürüm olmayan birleştirilmiş çalışmanın parçaları için herhangi bir kanak kod hariç, birleştirilmiş çalışma için ilgili kaynak demektir.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Birleştirilmiş çalışma için “İlgili Uygulama Kodu”, uygulamadan yeniden birleştirilmiş çalışma elde etmek için gerekli her tür veri ve yardımcı programı içeren fakat birleştirilmiş çalışmanın sistem kütüphanelerini içermeyen, uygulama için nesne kodu ve/veya kaynak kod demektir.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;1. GNU GKL’nin 3′üncü Bölümü İçin Özel Durum.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;GNU GKL’nin 3′üncü bölümüne bağlı olmaksızın işbu lisansın 3′üncü ve 4′üncü bölümleri uyarınca korunmuş bir çalışmayı taşıyabilirsiniz.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;2. Değiştirilmiş Sürümleri Taşımak.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Eğer bir kütüphaneyi değiştirdiyseniz, ve yaptığınız değişiklikte bir hizmet, bu hizmeti kullanan (hizmet çalıştırıldığında bir argüman olarak kullanması haricinde) bir uygulama tarafından sağlanan bir fonksiyona veya veriye dayanıyorsa, değiştirilmiş sürümün bir kopyasını taşıyabilirsiniz, ancak:&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    a) İşbu lisans uyarınca, uygulamanın böyle bir fonksiyon ya da tablo sağlamadığı durumlarda fonksiyonun hala çalışır durumda olması ve amacını gerçekleştirme doğrultusundaki kısımların işlemesi konusundasamimiyetle çaba harcamanız koşuluyla; veya,&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    b) GNU GKL altında, işbu lisansın ek izinlerinin hiçbiri bahsi geçen kopyaya uygulanmıyorsa.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;3. Kütüphane Başlık Dosyalarından Gelen Materyallerle Birleşen Nesne Kodu.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Bir uygulamadan gelen nesne kodu kütüphanenin bir parçası olan başlık dosyasından gelen materyalle birleşebilir. Eğer birleştirilmiş materyal sayısal değişkenler, veri yapısı tasarımları ve erişimciler, küçük makrolar ve küçük (on satır ya da daha az) satır içi fonksiyonlarıyla sınırlandırılmamışsa, aşağıdaki iki maddeyi yerine getirmeniz koşuluyla bu gibi bir nesne kodunu istediğiniz koşullar altında taşıyabilirsiniz:&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;a) Kütüphane tarafından kullanılan ve kullanımı işbu lisans kapsamında olan nesne kodunun herbir kopyasıyla birlikte göze çarpan bir uyarı verin.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;b)Nesne kodunun yanına GNU GKL’nin ve işbu lisans belgesinin birer kopyasını iliştirin.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;4. Birleştirilmiş Çalışmalar.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Birleştirilmiş çalışmanın içinde yer alan kütüphanenin parçalarını değiştirmeyi etkili bir şekilde kısıtlamadığı ve bu tür değişiklikler üzerinde tersine mühendislik ve hata ayıklama işlemlerini kısıtlmadığı sürece, birleştirilmiş çalışmayı, aşağıdaki maddelerin herbirini yerine getirdiğiniz takdirde istediğiniz koşullar altında taşıyabilirsiniz:&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;a) Kütüphane tarafından kullanılan ve kullanımı işbu lisans kapsamında olan birleştirilmiş çalışmanın herbir kopyasıyla birlikte göze çarpan bir uyarı verin.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;b)Birleştirilmiş çalışmanın yanına GNU GKL’nin ve işbu lisans belgesinin birer kopyasını iliştirin.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;c) Çalıştığı süre boyunca telif hakkı uyarısı gösteren birleştirilmiş çalışmalar için, kullanıcıyı GNU GKL ve işbu lisans belgesinin birer kopyasına yönlendiren bir referansla birlikte, bahsi geçen uyarıların yanına kütüphane için de bir telif hakkı uyarısı iliştirin.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;d) Aşağıdakilerin birini yapın:&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    0) En küçük ilgili kaynağı işbu lisansın hükümleri uyarınca, ve ilgili uygulama kodunu, izin verilen koşullar altında, kullanıcıya değiştirilen birleşmiş çalışmayı üretmek için bağlanmış sürümün değiştirilmiş sürümüyle uygulamayı yeniden birleştirmesi ya da yeniden bağlaması için en uygun biçimde, GNU GKL’nin ilgili kaynağı taşımaya ilişkin 6′ncı bölümünde belirtildiği gibi taşıyın.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    1) Kütüphaneyle birleştirmek için uygun bir paylaşılmış kütüphane düzeneği kullanın. Uygun kütüphane düzeneği 1) kullanım esnasında kullanıcının kendi bilgisayar sisteminde var olan kütüphane kopyasını kullanan, ve 2) bağlanmış sürümle arayüz uyumlu olan değiştirilmiş kütüphane sürümüyle düzgün çalışacak düzenektir.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;e) Yalnızca, aksi halde GNU GPL’nin 6′ncı bölümü altında böyle bir bilgi vermeniz gerekecekse, ve böyle bir bilgi uygulamanın değiştirilen bağlanmış sürümle yeniden birleştirilmesi veya bağlanmasıyla ortaya çıkan bağlanmış çalışmanın değiştirilmiş sürümünü kurmak ve çalıştırmak için gerekliyse, kurulum bilgisi sağlayın. (Eğer 4d0 seçeneğini kullandıysanız, kurulum bilgisi en küçük ilgili kaynağı ve ilgili uygulama kodunu da içermelidir. Eğer 4d1 seçeneğini kullandıysanız, GNU GKL’nin ilgili kaynağı taşımaya ilişkin 6′ncı bölümünde belirtildiği şekilde kurulum bilgisini sağlamalısınız.)&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;5. Birleştirilmiş Kütüphaneler&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Kütüphaneye dayalı bir iş olarak kütüphane hizmetlerini, uygulama olmayan ve işbu lisans kapsamında bulunmayan diğer kütüphane hizmetleriyle birlikte tek bir kütüphaneye yan yana koyabilir; aşağıdaki iki maddeyi gerçekleştirdiğiniz takdirde istediğiniz koşullar altında bu gibi birleştirilmiş kütüphaneleri taşıyabilirsiniz:&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    a) Birleştirilmiş kütüphaneyi diğer kütüphane hizmetleriyle birleştirilmemiş, işu lisans koşulları altında bulunan, kütüphaneye dayalı aynı çalışmanın bir kopyasıyla birlikte bulundurun.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    b) Birleştirilmiş kütüphaneyle birlikte, bu kütüphanenin bir kısmının kütüphaneye dayalı bir çalışma olduğuna ilişkin ve aynı çalışmanın birleştirilmemiş halini nereden bulacaklarını açıklayan göze çarpan bir uyarı verin.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;6. GNU Kısıtlı Genel Kamu Lisansı’nın Değiştirilmiş Sürümleri.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Özgür Yazılım Vakfı, GNU Kısıtlı Genel Kamu Lisansı’nın değiştirilmiş ve/veya yeni sürümlerini zaman zaman yayımlayabilir. Bu gibi yeni sürümler, halihazırdaki sürümle aynı ruhu taşımakta olup, yeni sorun ve endişeler konusunda ayrıntılandırılması bakımından farklılık gösterebilir.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Her sürüme ayırt edici bir sürüm numarası verilir. Eğer kütüphane sizin aldığınız haliyle GNU Kısıtlı Genel Kamu Lisansı’nın bazı numaralı sürümlerinin ya da “daha sonraki herhangi bir sürümünün” ona uygulandığını belirtiyorsa, yayımlanan o sürümün ya da Özgür Yazılım Vakfı tarafından yayınlanan daha sonraki bir sürümün hükümlerini ve koşullarını kabul etme seçeneğiniz mevcuttur. Eğer kütüphane sizin aldığınız haliyle GNU Kısıtlı Genel Kamu Lisansı’nın bir sürüm numarasını belirtmiyorsa, Özgür Yazılım Vakfı tarafından yayımlanan GNU Kısıtlı Genel Kamu Lisansı sürümlerinden herhangi birini seçebilirsiniz.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Eğer kütüphane sizin aldığınız haliyle ileride hangi GNU Kısıtlı Genel Kamu Lisansının uygulanacağını bir vekilin belirleyebileceğini belirtiyorsa, bu vekilin bir sürümü kabul ettiğinin resmi beyanatı, sizi kütüphane için o sürümü seçmeye kalıcı şekilde yetkilendirir. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>10</y>
+        <width>611</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'DejaVu Sans Mono,monospace'; font-size:small;&quot;&gt;AutomaticJavaInstallerProject v0.2  Copyright (C) 2017  SQSoft Musa Ortagedik&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot;-qt-paragraph-type:empty; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'DejaVu Sans Mono,monospace'; font-size:small;&quot;&gt;&lt;br/&gt;&lt;/pre&gt;&lt;pre style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'DejaVu Sans Mono,monospace'; font-size:small;&quot;&gt;Bu program LGPL lisansı ile lisanslanmıştır.&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'DejaVu Sans Mono,monospace'; font-size:small;&quot;&gt;Ayrıntılar için resmi döküman;&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'DejaVu Sans Mono,monospace'; font-size:small;&quot;&gt;'https://www.gnu.org/licenses/lgpl-3.0.en.html'.&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'DejaVu Sans Mono,monospace'; font-size:small;&quot;&gt;&lt;br/&gt;&lt;/pre&gt;&lt;pre style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'DejaVu Sans Mono,monospace'; font-size:small;&quot;&gt;Bu bir özgür yazılımdır, ve bazı koşullar altında yeniden dağıtmakta serbestsiniz; &lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'DejaVu Sans Mono,monospace'; font-size:small;&quot;&gt;ayrıntılar için 'https://www.gnu.org/licenses/lgpl-3.0.en.html'. &lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
