@@ -31,7 +31,6 @@ public:
     QWidget *centralWidget;
     QTabWidget *tbSekmeler;
     QWidget *tab_3;
-    QLabel *label_4;
     QPushButton *btnSec;
     QTextEdit *txtCommandLine;
     QLabel *label_2;
@@ -43,6 +42,10 @@ public:
     QPushButton *btnKur;
     QLineEdit *txtDosyaAdi;
     QPushButton *btnKapat;
+    QLabel *label_6;
+    QLineEdit *txtDosyaUyumlulugu;
+    QLabel *label_7;
+    QLineEdit *txtJavaTipi;
     QWidget *tab_4;
     QTextEdit *textEdit;
     QLabel *label_5;
@@ -52,7 +55,7 @@ public:
     {
         if (ajip->objectName().isEmpty())
             ajip->setObjectName(QString::fromUtf8("ajip"));
-        ajip->resize(671, 514);
+        ajip->resize(741, 617);
         QIcon icon;
         icon.addFile(QString::fromUtf8("../../../../media/bilisim/G|Drive Mobile/logo256.ico"), QSize(), QIcon::Normal, QIcon::Off);
         ajip->setWindowIcon(icon);
@@ -60,18 +63,15 @@ public:
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         tbSekmeler = new QTabWidget(centralWidget);
         tbSekmeler->setObjectName(QString::fromUtf8("tbSekmeler"));
-        tbSekmeler->setGeometry(QRect(0, 0, 671, 491));
+        tbSekmeler->setGeometry(QRect(0, 0, 741, 591));
         tab_3 = new QWidget();
         tab_3->setObjectName(QString::fromUtf8("tab_3"));
-        label_4 = new QLabel(tab_3);
-        label_4->setObjectName(QString::fromUtf8("label_4"));
-        label_4->setGeometry(QRect(10, 60, 31, 16));
         btnSec = new QPushButton(tab_3);
         btnSec->setObjectName(QString::fromUtf8("btnSec"));
-        btnSec->setGeometry(QRect(280, 50, 90, 23));
+        btnSec->setGeometry(QRect(540, 70, 90, 23));
         txtCommandLine = new QTextEdit(tab_3);
         txtCommandLine->setObjectName(QString::fromUtf8("txtCommandLine"));
-        txtCommandLine->setGeometry(QRect(10, 80, 651, 381));
+        txtCommandLine->setGeometry(QRect(10, 100, 721, 431));
         txtCommandLine->setReadOnly(true);
         label_2 = new QLabel(tab_3);
         label_2->setObjectName(QString::fromUtf8("label_2"));
@@ -81,28 +81,44 @@ public:
         label->setGeometry(QRect(200, 0, 131, 16));
         btnEklentiYukle = new QPushButton(tab_3);
         btnEklentiYukle->setObjectName(QString::fromUtf8("btnEklentiYukle"));
-        btnEklentiYukle->setGeometry(QRect(480, 50, 82, 23));
+        btnEklentiYukle->setGeometry(QRect(541, 540, 91, 23));
         txtKlasorAdi = new QLineEdit(tab_3);
         txtKlasorAdi->setObjectName(QString::fromUtf8("txtKlasorAdi"));
-        txtKlasorAdi->setGeometry(QRect(560, 20, 101, 23));
+        txtKlasorAdi->setGeometry(QRect(630, 20, 101, 23));
         txtKlasorAdi->setReadOnly(true);
         label_3 = new QLabel(tab_3);
         label_3->setObjectName(QString::fromUtf8("label_3"));
-        label_3->setGeometry(QRect(560, 0, 81, 16));
+        label_3->setGeometry(QRect(630, 0, 81, 16));
         txtDosyaYolu = new QLineEdit(tab_3);
         txtDosyaYolu->setObjectName(QString::fromUtf8("txtDosyaYolu"));
-        txtDosyaYolu->setGeometry(QRect(200, 20, 351, 23));
+        txtDosyaYolu->setGeometry(QRect(200, 20, 421, 23));
         txtDosyaYolu->setReadOnly(true);
         btnKur = new QPushButton(tab_3);
         btnKur->setObjectName(QString::fromUtf8("btnKur"));
-        btnKur->setGeometry(QRect(380, 50, 90, 23));
+        btnKur->setGeometry(QRect(640, 70, 90, 23));
         txtDosyaAdi = new QLineEdit(tab_3);
         txtDosyaAdi->setObjectName(QString::fromUtf8("txtDosyaAdi"));
         txtDosyaAdi->setGeometry(QRect(10, 20, 181, 23));
         txtDosyaAdi->setReadOnly(true);
         btnKapat = new QPushButton(tab_3);
         btnKapat->setObjectName(QString::fromUtf8("btnKapat"));
-        btnKapat->setGeometry(QRect(570, 50, 90, 23));
+        btnKapat->setGeometry(QRect(640, 540, 90, 23));
+        label_6 = new QLabel(tab_3);
+        label_6->setObjectName(QString::fromUtf8("label_6"));
+        label_6->setGeometry(QRect(10, 50, 121, 16));
+        txtDosyaUyumlulugu = new QLineEdit(tab_3);
+        txtDosyaUyumlulugu->setObjectName(QString::fromUtf8("txtDosyaUyumlulugu"));
+        txtDosyaUyumlulugu->setGeometry(QRect(10, 70, 121, 23));
+        txtDosyaUyumlulugu->setAlignment(Qt::AlignCenter);
+        txtDosyaUyumlulugu->setReadOnly(true);
+        label_7 = new QLabel(tab_3);
+        label_7->setObjectName(QString::fromUtf8("label_7"));
+        label_7->setGeometry(QRect(140, 50, 121, 16));
+        txtJavaTipi = new QLineEdit(tab_3);
+        txtJavaTipi->setObjectName(QString::fromUtf8("txtJavaTipi"));
+        txtJavaTipi->setGeometry(QRect(140, 70, 241, 23));
+        txtJavaTipi->setAlignment(Qt::AlignCenter);
+        txtJavaTipi->setReadOnly(true);
         tbSekmeler->addTab(tab_3, QString());
         tab_4 = new QWidget();
         tab_4->setObjectName(QString::fromUtf8("tab_4"));
@@ -129,8 +145,7 @@ public:
 
     void retranslateUi(QMainWindow *ajip)
     {
-        ajip->setWindowTitle(QApplication::translate("ajip", "Automatic Java Installer Project", 0, QApplication::UnicodeUTF8));
-        label_4->setText(QApplication::translate("ajip", "v0.2", 0, QApplication::UnicodeUTF8));
+        ajip->setWindowTitle(QApplication::translate("ajip", "Automatic Java Installer Project v0.3", 0, QApplication::UnicodeUTF8));
         btnSec->setText(QApplication::translate("ajip", "Dosya Se\303\247", 0, QApplication::UnicodeUTF8));
         label_2->setText(QApplication::translate("ajip", "Se\303\247ilen Dosya Ad\304\261", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("ajip", "Se\303\247ilen Dosya Yolu", 0, QApplication::UnicodeUTF8));
@@ -138,6 +153,8 @@ public:
         label_3->setText(QApplication::translate("ajip", "Java Klas\303\266r\303\274", 0, QApplication::UnicodeUTF8));
         btnKur->setText(QApplication::translate("ajip", "Kur", 0, QApplication::UnicodeUTF8));
         btnKapat->setText(QApplication::translate("ajip", "Kapat", 0, QApplication::UnicodeUTF8));
+        label_6->setText(QApplication::translate("ajip", "Dosya Uyumlulu\304\237u", 0, QApplication::UnicodeUTF8));
+        label_7->setText(QApplication::translate("ajip", "Java Tipi", 0, QApplication::UnicodeUTF8));
         tbSekmeler->setTabText(tbSekmeler->indexOf(tab_3), QApplication::translate("ajip", "Se\303\247 ve Kur", 0, QApplication::UnicodeUTF8));
         textEdit->setHtml(QApplication::translate("ajip", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
