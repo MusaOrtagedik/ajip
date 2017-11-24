@@ -62,35 +62,38 @@ void ajip::on_btnKur_clicked()
     process->waitForFinished();
     ui->pbarDurum->setValue(30);
     Gecikme(200);
-    ui->txtCommandLine->insertPlainText("\n-------------------------------------------------------------------------------------------------------\n\n");
-    ui->txtCommandLine->insertPlainText("update-alternatives --remove-all java\n");
-    ui->lblDurum->setText(QString::fromUtf8("Kurulu java sürümleri kaldırılıyor..."));
-    process->start("update-alternatives --remove-all java");
-    process->waitForFinished();
-    ui->pbarDurum->setValue(35);
-    Gecikme(150);
-    if(javaTipi == "jdk")
+    if(ui->chkEskiSurumKaldirma->isChecked() == false)
     {
         ui->txtCommandLine->insertPlainText("\n-------------------------------------------------------------------------------------------------------\n\n");
-        ui->txtCommandLine->insertPlainText("update-alternatives --remove-all javac\n");
-        ui->lblDurum->setText(QString::fromUtf8("Kurulu javac sürümleri kaldırılıyor..."));
-        process->start("update-alternatives --remove-all javac");
+        ui->txtCommandLine->insertPlainText("update-alternatives --remove-all java\n");
+        ui->lblDurum->setText(QString::fromUtf8("Kurulu java sürümleri kaldırılıyor..."));
+        process->start("update-alternatives --remove-all java");
         process->waitForFinished();
-        ui->pbarDurum->setValue(40);
-        Gecikme(100);
+        ui->pbarDurum->setValue(35);
+        Gecikme(150);
+        if(javaTipi == "jdk")
+        {
+            ui->txtCommandLine->insertPlainText("\n-------------------------------------------------------------------------------------------------------\n\n");
+            ui->txtCommandLine->insertPlainText("update-alternatives --remove-all javac\n");
+            ui->lblDurum->setText(QString::fromUtf8("Kurulu javac sürümleri kaldırılıyor..."));
+            process->start("update-alternatives --remove-all javac");
+            process->waitForFinished();
+            ui->pbarDurum->setValue(40);
+            Gecikme(100);
+            ui->txtCommandLine->insertPlainText("\n-------------------------------------------------------------------------------------------------------\n\n");
+            ui->txtCommandLine->insertPlainText("update-alternatives --remove-all jar\n");
+            ui->lblDurum->setText(QString::fromUtf8("Kurulu jar sürümleri kaldırılıyor..."));
+            process->start("update-alternatives --remove-all jar");
+            process->waitForFinished();
+            ui->pbarDurum->setValue(45);
+            Gecikme(100);
+        }
         ui->txtCommandLine->insertPlainText("\n-------------------------------------------------------------------------------------------------------\n\n");
-        ui->txtCommandLine->insertPlainText("update-alternatives --remove-all jar\n");
-        ui->lblDurum->setText(QString::fromUtf8("Kurulu jar sürümleri kaldırılıyor..."));
-        process->start("update-alternatives --remove-all jar");
+        ui->txtCommandLine->insertPlainText("update-alternatives --remove-all javaws\n");
+        ui->lblDurum->setText(QString::fromUtf8("Kurulu javaws sürümleri kaldırılıyor..."));
+        process->start("update-alternatives --remove-all javaws");
         process->waitForFinished();
-        ui->pbarDurum->setValue(45);
-        Gecikme(100);
     }
-    ui->txtCommandLine->insertPlainText("\n-------------------------------------------------------------------------------------------------------\n\n");
-    ui->txtCommandLine->insertPlainText("update-alternatives --remove-all javaws\n");
-    ui->lblDurum->setText(QString::fromUtf8("Kurulu javaws sürümleri kaldırılıyor..."));
-    process->start("update-alternatives --remove-all javaws");
-    process->waitForFinished();
     ui->pbarDurum->setValue(50);
     Gecikme(100);
     ui->txtCommandLine->insertPlainText("\n-------------------------------------------------------------------------------------------------------\n\n");
@@ -211,6 +214,24 @@ void ajip::on_btnKur_clicked()
     ui->txtCommandLine->insertPlainText("\n-------------------------------------------------------------------------------------------------------\n\n");
     ui->txtCommandLine->insertPlainText(QString::fromUtf8("İşlemler tamamlandı.\nFirefox tarayıcıya Java eklentisi yüklemek için 'Eklenti Yükle' butonunu tıklayınız."));
     ui->btnEklentiYukle->setEnabled(true);
+    if(ui->chkEskiSurumKaldirma->isChecked() == false)
+    {
+        ui->txtCommandLine->insertPlainText("\n-------------------------------------------------------------------------------------------------------\n\n");
+        ui->txtCommandLine->insertPlainText(QString::fromUtf8("Eski java sürümleri kaldırılmadığı için alternatif güncellemeler otomatik yapılmadı."));
+        ui->txtCommandLine->insertPlainText(QString::fromUtf8("Bir uçbirim açarak sırasıyla aşağıdaki kodları yazınız. Kodları tek tek çalıştırınız."));
+        ui->txtCommandLine->insertPlainText(QString::fromUtf8("jdk yüklemişseniz;"));
+        ui->txtCommandLine->insertPlainText("update-alternatives --install /usr/bin/java java " + JavaHome + "/" + klasorAdi + "/bin/java 100");
+        ui->txtCommandLine->insertPlainText("update-alternatives --install /usr/bin/javac javac " + JavaHome + "/" + klasorAdi + "/bin/javac 100");
+        ui->txtCommandLine->insertPlainText("update-alternatives --install /usr/bin/jar jar " + JavaHome + "/" + klasorAdi + "/bin/jar 100");
+        ui->txtCommandLine->insertPlainText("update-alternatives --install /usr/bin/javaws javaws " + JavaHome + "/" + klasorAdi + "/jre/bin/javaws 100");
+        ui->txtCommandLine->insertPlainText(QString::fromUtf8("jre yüklemişseniz;"));
+        ui->txtCommandLine->insertPlainText("update-alternatives --install /usr/bin/java java " + JavaHome + "/" + klasorAdi + "/bin/java 100");
+        ui->txtCommandLine->insertPlainText("update-alternatives --install /usr/bin/javaws javaws " + JavaHome + "/" + klasorAdi + "/bin/javaws 100");
+        ui->txtCommandLine->insertPlainText(QString::fromUtf8("Yükleme işleminden sonra aktifleştirmek için aşağıdaki kodları çalıştırınız."));
+        ui->txtCommandLine->insertPlainText(QString::fromUtf8("Bu kodlar çalıştırıldıklarında çıkan seçenekler olacaktır. javac ve jar seçenekleri olmayabilir. Ayrıca daha önceden tamamen javayı kaldırmışsanız hiç birinde hiç bir seçenek çıkmayabilir. Otomatik yüklenmiş olur."));
+        ui->txtCommandLine->insertPlainText(QString::fromUtf8("Seçenekler çıkmışsa yeni yüklemiş olduğunuz java adresinin klasör yolunu takip ederek karşısında bulunan en sol taraftaki sıra numarasını klavyeden tuşlayarak yeni java sürümünü sistemden aktif edebilirsiniz."));
+        ui->txtCommandLine->insertPlainText(QString::fromUtf8("JAVA_HOME, JRE_HOME ve PATH=$PATH: seçenekleri içinse bu işlem takibi kutucuğunun üst sıralarında nasıl değiştirildiği hakkında örnek bulabilirsiniz."));
+    }
     ui->lblDurum->setText(QString::fromUtf8("Kurulum tamamlandı."));
 }
 
@@ -221,12 +242,12 @@ void ajip::on_btnKapat_clicked()
 
 void ajip::readStandardOut()
 {
-    ui->txtCommandLine->append(QString::fromUtf8(process->readAllStandardOutput()));  // read normal output
+    ui->txtCommandLine->append(QString::fromUtf8(process->readAllStandardOutput()));
 }
 
 void ajip::readStandardError()
 {
-    ui->txtCommandLine->append(QString::fromUtf8(process->readAllStandardError()));  // read error output
+    ui->txtCommandLine->append(QString::fromUtf8(process->readAllStandardError()));
 }
 
 void ajip::on_btnEklentiYukle_clicked()
@@ -267,14 +288,6 @@ void ajip::on_btnEklentiYukle_clicked()
     }
     ui->txtCommandLine->insertPlainText("\n-------------------------------------------------------------------------------------------------------\n\n");
     ui->txtCommandLine->insertPlainText(QString::fromUtf8("Lütfen yönetici olarak açmış olduğunuz bir dosya yönetici ile '/usr/lib/mozilla/plugins' dizininde 'libnpjp2.so' dosyası haricinde bulunan java dosyasını siliniz.\n"));
-}
-
-void QTest::qSleep(int ms)
-{
-    QTEST_ASSERT(ms > 0);
-
-    struct timespec ts = { ms / 1000, (ms % 1000) * 1000 * 1000 };
-    nanosleep(&ts, NULL);
 }
 
 void ajip::Gecikme(int msecs)
