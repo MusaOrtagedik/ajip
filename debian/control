@@ -1,0 +1,14 @@
+Source: ajip
+Section: utils
+Priority: optional
+Maintainer: Musa Ortagedik <musa.ortagedik@localhost>
+Uploaders: Yunusemre Şentürk <yunusemre.senturk@pardus.org.tr>
+Build-Depends: debhelper (>= 9), libc6, libgcc1, libgl1-mesa-glx | libgl1, libqt5core5a, libqt5gui5, libqt5widgets5, libstdc++6
+Standards-Version: 3.9.8
+Homepage: https://github.com/MusaOrtagedik/ajip
+
+Package: ajip
+Architecture: amd64
+Depends: ${shlibs:Depends}, ${misc:Depends} 
+Description: Automatic Java Installer Project
+ Otomatik Java Yukleme Projesi.
