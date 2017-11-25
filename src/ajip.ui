@@ -7,15 +7,15 @@
     <x>0</x>
     <y>0</y>
     <width>741</width>
-    <height>617</height>
+    <height>624</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Automatic Java Installer Project v0.4-0</string>
+   <string>Automatic Java Installer Project v0.4-1</string>
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>../../../../usr/share/ajip/ajip-logo-128.png</normaloff>../../../../usr/share/ajip/ajip-logo-128.png</iconset>
+    <normaloff>../../../../../usr/share/ajip/logo.png</normaloff>../../../../../usr/share/ajip/logo.png</iconset>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QTabWidget" name="tbSekmeler">
