@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Name=AJIP
+Name[tr]=Ajip
+Type=Application
+Comment=Automatic Java Installer Project.
+Comment[tr]=Otomatik Java Yükleme Projesi
+Terminal=false
+Exec=/usr/bin/ajip
+Icon=/usr/share/ajip/logo.png
+Categories=Qt;Utility;
+GenericName=
