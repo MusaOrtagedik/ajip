@@ -218,19 +218,30 @@ void ajip::on_btnKur_clicked()
     {
         ui->txtCommandLine->insertPlainText("\n-------------------------------------------------------------------------------------------------------\n\n");
         ui->txtCommandLine->insertPlainText(QString::fromUtf8("Eski java sürümleri kaldırılmadığı için alternatif güncellemeler otomatik yapılmadı."));
-        ui->txtCommandLine->insertPlainText(QString::fromUtf8("Bir uçbirim açarak sırasıyla aşağıdaki kodları yazınız. Kodları tek tek çalıştırınız.\n"));
+        ui->txtCommandLine->insertPlainText(QString::fromUtf8("Bir uçbirim açarak sırasıyla aşağıdaki kodları yazınız. Kodları tek tek çalıştırınız.\n\n"));
         ui->txtCommandLine->insertPlainText(QString::fromUtf8("jdk yüklemişseniz;\n"));
         ui->txtCommandLine->insertPlainText("update-alternatives --install /usr/bin/java java " + JavaHome + "/" + klasorAdi + "/bin/java 100\n");
         ui->txtCommandLine->insertPlainText("update-alternatives --install /usr/bin/javac javac " + JavaHome + "/" + klasorAdi + "/bin/javac 100\n");
         ui->txtCommandLine->insertPlainText("update-alternatives --install /usr/bin/jar jar " + JavaHome + "/" + klasorAdi + "/bin/jar 100\n");
-        ui->txtCommandLine->insertPlainText("update-alternatives --install /usr/bin/javaws javaws " + JavaHome + "/" + klasorAdi + "/jre/bin/javaws 100\n");
+        ui->txtCommandLine->insertPlainText("update-alternatives --install /usr/bin/javaws javaws " + JavaHome + "/" + klasorAdi + "/jre/bin/javaws 100\n\n");
         ui->txtCommandLine->insertPlainText(QString::fromUtf8("jre yüklemişseniz;\n"));
         ui->txtCommandLine->insertPlainText("update-alternatives --install /usr/bin/java java " + JavaHome + "/" + klasorAdi + "/bin/java 100\n");
-        ui->txtCommandLine->insertPlainText("update-alternatives --install /usr/bin/javaws javaws " + JavaHome + "/" + klasorAdi + "/bin/javaws 100\n");
+        ui->txtCommandLine->insertPlainText("update-alternatives --install /usr/bin/javaws javaws " + JavaHome + "/" + klasorAdi + "/bin/javaws 100\n\n");
         ui->txtCommandLine->insertPlainText(QString::fromUtf8("Yükleme işleminden sonra aktifleştirmek için aşağıdaki kodları çalıştırınız."));
         ui->txtCommandLine->insertPlainText(QString::fromUtf8("Bu kodlar çalıştırıldıklarında çıkan seçenekler olacaktır. javac ve jar seçenekleri olmayabilir. Ayrıca daha önceden tamamen javayı kaldırmışsanız hiç birinde hiç bir seçenek çıkmayabilir. Otomatik yüklenmiş olur."));
-        ui->txtCommandLine->insertPlainText(QString::fromUtf8("Seçenekler çıkmışsa yeni yüklemiş olduğunuz java adresinin klasör yolunu takip ederek karşısında bulunan en sol taraftaki sıra numarasını klavyeden tuşlayarak yeni java sürümünü sistemden aktif edebilirsiniz.\n"));
-        ui->txtCommandLine->insertPlainText(QString::fromUtf8("JAVA_HOME, JRE_HOME ve PATH=$PATH: seçenekleri içinse bu işlem takibi kutucuğunun üst sıralarında nasıl değiştirildiği hakkında örnek bulabilirsiniz.\n"));
+        ui->txtCommandLine->insertPlainText(QString::fromUtf8("Seçenekler çıkmışsa yeni yüklemiş olduğunuz java adresinin klasör yolunu takip ederek karşısında bulunan en sol taraftaki sıra numarasını klavyeden tuşlayarak yeni java sürümünü sistemden aktif edebilirsiniz.\n\n"));
+        ui->txtCommandLine->insertPlainText(QString::fromUtf8("Önemli Not : Örnek; java yapılandırmasını tamamlamak için ilk kodu çalıştırdık fakat bir uyarıyla karşılaştık; java bağ grubunda (/usr/bin/java alternatifini sağlayan) sadece bir alternatif var : java_yolu (java_yolu: sizin java adresiniz)"));
+        ui->txtCommandLine->insertPlainText(QString::fromUtf8("Bu durumda java yüklenmiş ve tanımlanmış demektir. Problemsiz çalışabilir. Bir sonraki adıma geçebilirsiniz.\n\n"));
+        ui->txtCommandLine->insertPlainText(QString::fromUtf8("jdk yüklemişseniz;\n"));
+        ui->txtCommandLine->insertPlainText(QString::fromUtf8("update-alternatives --config java"));
+        ui->txtCommandLine->insertPlainText(QString::fromUtf8("update-alternatives --config javac"));
+        ui->txtCommandLine->insertPlainText(QString::fromUtf8("update-alternatives --config jar"));
+        ui->txtCommandLine->insertPlainText(QString::fromUtf8("update-alternatives --config javaws\n\n"));
+        ui->txtCommandLine->insertPlainText(QString::fromUtf8("jre yüklemişseniz;\n"));
+        ui->txtCommandLine->insertPlainText(QString::fromUtf8("update-alternatives --config java"));
+        ui->txtCommandLine->insertPlainText(QString::fromUtf8("update-alternatives --config javaws\n\n"));
+        ui->txtCommandLine->insertPlainText(QString::fromUtf8("Bu işlemler tamamlandıktan sonra son adıma geçiniz.\n\n"));
+        ui->txtCommandLine->insertPlainText(QString::fromUtf8("JAVA_HOME, JRE_HOME ve PATH=$PATH: seçenekleri için bu işlem takibi kutucuğunun üst sıralarında nasıl değiştirildiği hakkında örnek bulabilirsiniz.\n"));
     }
     ui->lblDurum->setText(QString::fromUtf8("Kurulum tamamlandı."));
 }
