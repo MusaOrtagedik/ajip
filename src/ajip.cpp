@@ -97,32 +97,32 @@ void ajip::on_btnKur_clicked()
     ui->pbarDurum->setValue(50);
     Gecikme(100);
     ui->txtCommandLine->insertPlainText("\n-------------------------------------------------------------------------------------------------------\n\n");
-    ui->txtCommandLine->insertPlainText("update-alternatives --install /usr/bin/java java /usr/lib/jvm/" + klasorAdi + "/bin/java 1081\n");
+    ui->txtCommandLine->insertPlainText("update-alternatives --install /usr/bin/java java " + JavaHome + "/" + klasorAdi + "/bin/java 1081\n");
     ui->lblDurum->setText(QString::fromUtf8("Yeni java sürümü kuruluyor..."));
-    process->start("update-alternatives --install /usr/bin/java java /usr/lib/jvm/" + klasorAdi + "/bin/java 1081");
+    process->start("update-alternatives --install /usr/bin/java java " + JavaHome + "/" + klasorAdi + "/bin/java 1081");
     process->waitForFinished();
     ui->pbarDurum->setValue(55);
     Gecikme(100);
     if(javaTipi == "jdk")
     {
         ui->txtCommandLine->insertPlainText("\n-------------------------------------------------------------------------------------------------------\n\n");
-        ui->txtCommandLine->insertPlainText("update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/" + klasorAdi + "/bin/javac 1081\n");
+        ui->txtCommandLine->insertPlainText("update-alternatives --install /usr/bin/javac javac " + JavaHome + "/" + klasorAdi + "/bin/javac 1081\n");
         ui->lblDurum->setText(QString::fromUtf8("Yeni javac sürümü kuruluyor..."));
-        process->start("update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/" + klasorAdi + "/bin/javac 1081");
+        process->start("update-alternatives --install /usr/bin/javac javac " + JavaHome + "/" + klasorAdi + "/bin/javac 1081");
         process->waitForFinished();
         ui->pbarDurum->setValue(60);
         Gecikme(100);
         ui->txtCommandLine->insertPlainText("\n-------------------------------------------------------------------------------------------------------\n\n");
-        ui->txtCommandLine->insertPlainText("update-alternatives --install /usr/bin/jar jar /usr/lib/jvm/" + klasorAdi + "/bin/jar 1081\n");
+        ui->txtCommandLine->insertPlainText("update-alternatives --install /usr/bin/jar jar " + JavaHome + "/" + klasorAdi + "/bin/jar 1081\n");
         ui->lblDurum->setText(QString::fromUtf8("Yeni jar sürümü kuruluyor..."));
-        process->start("update-alternatives --install /usr/bin/jar jar /usr/lib/jvm/" + klasorAdi + "/bin/jar 1081");
+        process->start("update-alternatives --install /usr/bin/jar jar " + JavaHome + "/" + klasorAdi + "/bin/jar 1081");
         process->waitForFinished();
         ui->pbarDurum->setValue(65);
         Gecikme(100);
         ui->txtCommandLine->insertPlainText("\n-------------------------------------------------------------------------------------------------------\n\n");
-        ui->txtCommandLine->insertPlainText("update-alternatives --install /usr/bin/javaws javaws /usr/lib/jvm/" + klasorAdi + "/jre/bin/javaws 1081\n");
+        ui->txtCommandLine->insertPlainText("update-alternatives --install /usr/bin/javaws javaws " + JavaHome + "/" + klasorAdi + "/jre/bin/javaws 1081\n");
         ui->lblDurum->setText(QString::fromUtf8("Yeni javaws sürümü kuruluyor..."));
-        process->start("update-alternatives --install /usr/bin/javaws javaws /usr/lib/jvm/" + klasorAdi + "/jre/bin/javaws 1081");
+        process->start("update-alternatives --install /usr/bin/javaws javaws " + JavaHome + "/" + klasorAdi + "/jre/bin/javaws 1081");
         process->waitForFinished();
         ui->pbarDurum->setValue(70);
         Gecikme(100);
@@ -130,33 +130,33 @@ void ajip::on_btnKur_clicked()
     else if(javaTipi == "jre")
     {
         ui->txtCommandLine->insertPlainText("\n-------------------------------------------------------------------------------------------------------\n\n");
-        ui->txtCommandLine->insertPlainText("update-alternatives --install /usr/bin/javaws javaws /usr/lib/jvm/" + klasorAdi + "/bin/javaws 1081\n");
+        ui->txtCommandLine->insertPlainText("update-alternatives --install /usr/bin/javaws javaws " + JavaHome + "/" + klasorAdi + "/bin/javaws 1081\n");
         ui->lblDurum->setText(QString::fromUtf8("Yeni javaws sürümü kuruluyor..."));
-        process->start("update-alternatives --install /usr/bin/javaws javaws /usr/lib/jvm/" + klasorAdi + "/bin/javaws 1081");
+        process->start("update-alternatives --install /usr/bin/javaws javaws " + JavaHome + "/" + klasorAdi + "/bin/javaws 1081");
         process->waitForFinished();
         ui->pbarDurum->setValue(75);
         Gecikme(100);
     }
     ui->txtCommandLine->insertPlainText("\n-------------------------------------------------------------------------------------------------------\n\n");
-    ui->txtCommandLine->insertPlainText("export JAVA_HOME=/usr/lib/jvm/" + klasorAdi + "/\n");
+    ui->txtCommandLine->insertPlainText("export JAVA_HOME=" + JavaHome + "/" + klasorAdi + "/\n");
     ui->lblDurum->setText(QString::fromUtf8("Java home klasörü ayarlanıyor..."));
-    process->start("export JAVA_HOME=/usr/lib/jvm/" + klasorAdi + "/");
+    process->start("export JAVA_HOME=" + JavaHome + "/" + klasorAdi + "/");
     process->waitForFinished();
     ui->pbarDurum->setValue(80);
     Gecikme(100);
     if(javaTipi == "jdk")
     {
         ui->txtCommandLine->insertPlainText("\n-------------------------------------------------------------------------------------------------------\n\n");
-        ui->txtCommandLine->insertPlainText("export JRE_HOME=/usr/lib/jvm/" + klasorAdi + "/jre/\n");
+        ui->txtCommandLine->insertPlainText("export JRE_HOME=" + JavaHome + "/" + klasorAdi + "/jre/\n");
         ui->lblDurum->setText(QString::fromUtf8("Jre home klasörü ayarlanıyor..."));
-        process->start("export JRE_HOME=/usr/lib/jvm/" + klasorAdi + "/jre/");
+        process->start("export JRE_HOME=" + JavaHome + "/" + klasorAdi + "/jre/");
         process->waitForFinished();
         ui->pbarDurum->setValue(85);
         Gecikme(100);
         ui->txtCommandLine->insertPlainText("\n-------------------------------------------------------------------------------------------------------\n\n");
-        ui->txtCommandLine->insertPlainText("export PATH=$PATH:/usr/lib/jvm/" + klasorAdi + "/bin:/usr/lib/jvm/" + klasorAdi + "/jre/bin\n");
+        ui->txtCommandLine->insertPlainText("export PATH=$PATH:" + JavaHome + "/" + klasorAdi + "/bin:" + JavaHome + "/" + klasorAdi + "/jre/bin\n");
         ui->lblDurum->setText(QString::fromUtf8("Java adreslemeleri ayarlanıyor..."));
-        process->start("export PATH=$PATH:/usr/lib/jvm/" + klasorAdi + "/bin:/usr/lib/jvm/" + klasorAdi + "/jre/bin");
+        process->start("export PATH=$PATH:" + JavaHome + "/" + klasorAdi + "/bin:" + JavaHome + "/" + klasorAdi + "/jre/bin");
         process->waitForFinished();
         ui->pbarDurum->setValue(92);
         Gecikme(100);
@@ -164,16 +164,16 @@ void ajip::on_btnKur_clicked()
     else if(javaTipi == "jre")
     {
         ui->txtCommandLine->insertPlainText("\n-------------------------------------------------------------------------------------------------------\n\n");
-        ui->txtCommandLine->insertPlainText("export JRE_HOME=/usr/lib/jvm/" + klasorAdi + "/\n");
+        ui->txtCommandLine->insertPlainText("export JRE_HOME=" + JavaHome + "/" + klasorAdi + "/\n");
         ui->lblDurum->setText(QString::fromUtf8("Jre home klasörü ayarlanıyor..."));
-        process->start("export JRE_HOME=/usr/lib/jvm/" + klasorAdi + "/");
+        process->start("export JRE_HOME=" + JavaHome + "/" + klasorAdi + "/");
         process->waitForFinished();
         ui->pbarDurum->setValue(85);
         Gecikme(100);
         ui->txtCommandLine->insertPlainText("\n-------------------------------------------------------------------------------------------------------\n\n");
-        ui->txtCommandLine->insertPlainText("export PATH=$PATH:/usr/lib/jvm/" + klasorAdi + "/bin:/usr/lib/jvm/" + klasorAdi + "/bin\n");
+        ui->txtCommandLine->insertPlainText("export PATH=$PATH:" + JavaHome + "/" + klasorAdi + "/bin:" + JavaHome + "/" + klasorAdi + "/bin\n");
         ui->lblDurum->setText(QString::fromUtf8("Java adreslemeleri ayarlanıyor..."));
-        process->start("export PATH=$PATH:/usr/lib/jvm/" + klasorAdi + "/bin:/usr/lib/jvm/" + klasorAdi + "/bin");
+        process->start("export PATH=$PATH:" + JavaHome + "/" + klasorAdi + "/bin:" + JavaHome + "/" + klasorAdi + "/bin");
         process->waitForFinished();
         ui->pbarDurum->setValue(92);
         Gecikme(100);
