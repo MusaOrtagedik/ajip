@@ -1,3 +1,9 @@
+ajip (0.4.2) unstable; urgency=medium
+
+  * Minor errors were removed.
+
+ -- Musa Ortagedik <musaortagedik@gmail.com>  Mon, 27 Nov 2017 12:37:45 +0300
+
 ajip (0.4.1) unstable; urgency=medium
 
   * Initial release.
